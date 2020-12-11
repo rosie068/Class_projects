@@ -1,2 +1,3 @@
 # Class_projects
-Some projects written in my undergraduate and graduate courses at UCLA. These scripts are meant for study only and kept as my personal record. Please refrain from plagiarizing and do not copy for similar homework/project.
+Class projects during CS classes for undergraduate and graduate courses at UCLA
+These projects are kept as a personal record and not meant to be copied. Please refrain from using my code in similar homework/project settings.

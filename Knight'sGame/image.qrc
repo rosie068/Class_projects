@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>goal.jpg</file>
+        <file>knight.jpg</file>
+        <file>stone.jpg</file>
+        <file>visitedStone.png</file>
+        <file>dead.jpg</file>
+        <file>youWon.jpeg</file>
+        <file>lava.png</file>
+        <file>knightSchematic.png</file>
+    </qresource>
+</RCC>
