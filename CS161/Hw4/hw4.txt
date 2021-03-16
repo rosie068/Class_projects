@@ -1,0 +1,97 @@
+CS 161 Hw4
+Rosemary He
+204753981
+
+1. The instance with 3 colors is NOT satisfiable with the output:
+c Rsat version 3.01
+c Random seed = 91648253
+c Base unit clause learned: 0
+c Probing 21/21 variables
+c level 1
+c Finished probing in 0.0000 s, 0 implications found using 1 levels
+c Total implications found so far: 0/21
+c 
+c 
+s UNSATISFIABLE
+c CNF stats: (21 vars, 64 clauses)
+c Decisions: 12
+c Conflicts: 10
+c Avg lpc: 2.57
+c Max decision level: 4
+c Final decision lit size:21 (100.00 %)
+c Final stack/save sizes: 10(47.62 %)/10(47.62 %)
+c Final cdc size: 100 (476.19 %)
+c Running time: 0.00000 seconds
+
+2. The instance is satisfiable with 4 colors with the output:
+c Rsat version 3.01
+c Random seed = 91648253
+c Base unit clause learned: 0
+c Probing 28/28 variables
+c level 1
+c Finished probing in 0.0000 s, 0 implications found using 1 levels
+c Total implications found so far: 0/28
+c 
+c 
+s SATISFIABLE
+c CNF stats: (28 vars, 97 clauses)
+c Decisions: 11
+c Conflicts: 0
+c Avg lpc: nan
+c Max decision level: 11
+c Final decision lit size:28 (100.00 %)
+c Final stack/save sizes: 10(35.71 %)/10(35.71 %)
+c Final cdc size: 100 (357.14 %)
+c Running time: 0.00000 seconds
+
+
+3. These results tell me that at least 4 nodes are interconnected such that they must be different colors. Therefore we need at least 4 colors to solve this problem. One solution is as follows, where R=red, G=green, B=blue, Y=yellow:
+1-R
+2-G
+3-B
+4-R
+5-G
+6-B
+7-Y
+
+4. The minimum number of colors to make the second problem satisfiable is 8. I started testing with 3 colors up until 7 and got the result
+c Rsat version 3.01
+c Random seed = 91648253
+c Base unit clause learned: 0
+c Probing 350/350 variables
+c level 1
+c Finished probing in 0.0000 s, 0 implications found using 1 levels
+c Total implications found so far: 0/350
+c 
+c 
+s UNSATISFIABLE
+c CNF stats: (350 vars, 4985 clauses)
+c Decisions: 1668
+c Conflicts: 1516
+c Avg lpc: 14.71
+c Max decision level: 62
+c Final decision lit size:350 (100.00 %)
+c Final stack/save sizes: 20(5.71 %)/20(5.71 %)
+c Final cdc size: 100 (28.57 %)
+c Running time: 0.02000 seconds
+
+Finally with 8 colors I got:
+c Rsat version 3.01
+c Random seed = 91648253
+c Base unit clause learned: 0
+c Probing 400/400 variables
+c level 1
+c Finished probing in 0.0000 s, 0 implications found using 1 levels
+c Total implications found so far: 0/400
+c 
+c 
+s SATISFIABLE
+c CNF stats: (400 vars, 5890 clauses)
+c Decisions: 2502
+c Conflicts: 1444
+c Avg lpc: 52.75
+c Max decision level: 87
+c Final decision lit size:400 (100.00 %)
+c Final stack/save sizes: 80(20.00 %)/80(20.00 %)
+c Final cdc size: 200 (50.00 %)
+c Running time: 0.02899 seconds

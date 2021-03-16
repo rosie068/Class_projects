@@ -1,0 +1,39 @@
+CS 161 HW 1
+Rosemary He
+204-753-981
+
+For all sample executions I ran locally on Mac with the commands:
+$sbcl
+$(load "hw1.lsp")
+
+1. I test the first 20 cases of PAD and prints to the terminal with the function PADOUT()
+My output is as follows:
+* (PADOUT 20)
+(1 1 1 2 2 3 4 5 7 9 12 16 21 28 37 49 65 86 114 151 200 265)
+
+When I run the program with larger N=100, the iteration takes significantly longer to run. 
+This is because runtime grows exponentially with the input n.
+
+2. I test the first 20 cases of SUMS and prints to the terminal with the function SUMSOUT()
+My output is as follows:
+* (SUMSOUT 20)
+(0 0 0 1 1 2 3 4 6 8 11 15 20 27 36 48 64 85 113 150 199 264)
+
+I notice that the values returned by PAD is 1 more than the value returned by SUMS.
+This is because the number of additions needed for n is the sum of the number of additions of n-2 and n-3, plus 1 more addition in the end. This corresponds to the Padovan sequence, when the first 3 doesn't require addition. Therefore, each output of SUMS() is 1 less than the corresponding output of PAD().
+
+3. I test the cases for ANON as follows:
+* (ANON '42)
+?
+* (ANON 'FOO)
+?
+* (ANON '(((L E) F) T))
+(((? ?) ?) ?)
+* (ANON '(5 FOO 3.1 -0.2))
+(? ? ? ?)
+* (ANON '(1 (FOO 3.1) -0.2))
+(? (? ?) ?)
+* (ANON '(((1 2) (FOO 3.1)) (BAR -0.2)))
+(((? ?) (? ?)) (? ?))
+* (ANON '(R (I (G (H T)))))
+(? (? (? (? ?))))

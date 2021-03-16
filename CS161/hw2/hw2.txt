@@ -1,0 +1,34 @@
+CS 161 Hw2
+Rosemary He
+204-753-981
+
+For all sample executions I ran locally on Mac with the commands:
+$sbcl
+$(load "hw2.lsp")
+
+1. I tested BFS on the following test cases and got the outputs as expected:
+* (BFS '(ROOT))
+(ROOT)
+* (BFS '((((L E) F) T)))
+(T F L E)
+* (BFS '((R (I (G (H T))))))
+(R I G H T)
+* (BFS '(((A (B)) C (D))))
+(C A D B)
+* (BFS '((T (H R E) E)))
+(T E H R E)
+* (BFS '((A ((C ((E) D)) B))))
+(A B C D E)
+
+2. I tested DFS on the homer problem with the following test cases and the outputs as expected:
+* (DFS '(() () () ()) ())
+((NIL NIL NIL NIL) (T T NIL NIL) (NIL T NIL NIL) (T T T NIL) (NIL NIL T NIL)
+ (T NIL T T) (NIL NIL T T) (T T T T))
+* (DFS '(T T T nil) '((nil nil nil nil) (T T nil nil) (nil T nil nil)))
+((NIL NIL NIL NIL) (T T NIL NIL) (NIL T NIL NIL) (T T T NIL) (NIL NIL T NIL)
+ (T NIL T T) (NIL NIL T T) (T T T T))
+* (DFS '(T T T T) ())
+((T T T T))
+* (DFS '(() () () T) '(() () () ()))
+((NIL NIL NIL NIL) (NIL NIL NIL T) (T T NIL T) (NIL T NIL NIL) (T T T NIL)
+ (NIL NIL T NIL) (T NIL T T) (NIL NIL T T) (T T T T))
